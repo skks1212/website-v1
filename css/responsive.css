@@ -1,0 +1,133 @@
+@media screen and (max-width:1300px){
+    .s-about-side-phone.animate{
+        left: -22vh;
+        transform: rotate(45deg);
+    }
+    .s-about-side-pc.animate{
+        right: -70vh;
+    }
+}
+@media screen and (max-width:1000px){
+    .s-landing-name{
+        font-size: 100px;
+        line-height: 80px;
+        text-align: left;
+    }
+}
+@media screen and (max-width:750px){
+    .s-landing-face{
+        bottom: 0px;
+        top: 150px;
+        right: 0px;
+        background-size: cover;
+        background-position:center;
+        width: 100vw;
+        filter: grayscale(100%) brightness(70%);
+        z-index: 1;
+    }
+    .s-landing-name{
+        font-size: 70px;
+        line-height: 70px;
+        text-align: left;
+    }
+    .s-landing-txt{
+        display: block;
+        left: 30px;
+        right: 30px;
+        font-size: 20px;
+        padding-top: 30px;
+    }
+    .s-progress-bar{
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+    }
+    .s-progress-line{
+        width: 100%;
+    }
+    .s-about-container{
+        width: auto;
+        padding:30px;
+        font-size: 16px;
+        margin-bottom: 100px;
+    }
+    .s-about-side-phone{
+        display: none;
+    }
+    .s-about-side-pc{
+        height:  53.5vw;
+        width: 100vw;
+        right: -0vw;
+        bottom: -55vw;
+    }
+    .s-about-side-pc.animate{
+        right: -0vw;
+        bottom: -20px;
+    }
+    .s-contact-main{
+        font-size: 16px;
+        padding: 30px;
+    }
+    .s-code-wrap{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .s-code-container{
+        width: calc(90vw);
+        
+    }
+    .s-code-block{
+        width: 65px;
+        height: 65px;
+        border-radius: 10px;
+        font-size: 30px;
+    }
+    .s-code-write{
+        width: calc(100vw - 100px);
+        font-size: 16px;
+        text-align: left;
+        padding: 30px;
+    }
+    .s-ach-wrap{
+        height: 100vh;
+        color: white;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+    .s-ach-box-wrap-wrap{
+        width: 100vw;
+        height: 20vh;
+    }
+    .s-ach-box-wrap{
+        left:10px;
+    }
+    
+    .s-ach-box{
+        width: calc(100vw - 20px);
+        height: 40vw;
+    }
+    .s-ach-box-front{
+        position: absolute;
+        bottom: -120px;
+        left: 0px;
+        z-index: 2;
+        right:0px;
+        overflow: hidden;
+        height:250px;
+    }
+    .s-ach-box-written{
+        padding: 10px;
+        transform: scale(1);
+    }
+    .s-ach-box-title{
+        font-family: heavyf;
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .s-ach-box-front::before{
+        display: none;
+    }
+}

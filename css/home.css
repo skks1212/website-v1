@@ -1,0 +1,429 @@
+@font-face {
+    font-family: heavyf;
+    src: url('../inc/lib/fonts/uni-sans/UniSansDemo-HeavyCAPS.otf');
+}
+@font-face {
+    font-family: thinf;
+    src: url('../inc/lib/fonts/uni-sans/UniSansDemo-ThinCAPS.otf');
+}
+@font-face {
+    font-family: gilroyb;
+    src: url('../inc/lib/fonts/gilroy/bold.otf');
+}
+@font-face {
+    font-family: gilroyl;
+    src: url('../inc/lib/fonts/gilroy/light.otf');
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+    font-family: gilroyl;
+}
+.s-landing-wrap{
+    background: rgb(0, 0, 0);
+    height: 100vh;
+}
+.s-landing-txt{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 100px;
+    color: white;
+    font-family: gilroyl;
+    z-index: 2;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.s-landing-name{
+    font-size: 150px;
+    font-family: heavyf;
+    background: linear-gradient(to right, rgb(179, 0, 149), rgb(218, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 130px;
+    text-align: left;
+}
+.s-landing-face{
+    background: url('../med/me_.png');
+    position: absolute;
+    bottom: 0px;
+    top: 100px;
+    right: 100px;
+    background-size: cover;
+    background-position:center;
+    width: 50vw;
+    filter: grayscale(100%) brightness(70%);
+    z-index: 1;
+}
+.s-about-wrap{
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+.s-title{
+    font-size: 50px;
+    font-family: heavyf;
+    background: linear-gradient(to right, rgb(179, 0, 149), rgb(218, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.s-about-container{
+    width: 600px;
+    font-size: 25px;
+    
+}
+.s-about-container a{
+    background: linear-gradient(to right, rgb(179, 0, 149), rgb(218, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+.s-quote{
+    color: rgb(204, 204, 204);
+    font-style: italic;
+}
+.s-code-wrap{
+    height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.s-code-container{
+    width: 410px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.s-code-block{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: rgb(29, 29, 29);
+    color: white;
+    font-size: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.s-code-block img{
+    width: 40px;
+    filter: brightness(0) invert(1);
+}
+.s-code-block::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(to right, rgb(179, 0, 149), rgb(218, 0, 0));
+    transition: 0.2s;
+    opacity: 0;
+}
+.s-code-block:hover{
+    background: transparent;
+}
+.s-code-block:hover::after{
+    opacity: 1;
+}
+.s-code-write{
+    width: 600px;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 50px;
+}
+.s-ach-wrap{
+    height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.pop-animate{
+    animation: pop-up 1s;
+}
+.s-about-side-phone{
+    position: absolute;
+    height: 60vh;
+    width: 35.6vh;
+    left: -35.6vh;
+    top: 20vh;
+    background: url('../med/phone.png');
+    background-position: center;
+    background-size: cover;
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+.s-about-side-pc{
+    position: absolute;
+    height: 60vh;
+    width: 111.2vh;
+    right: -111.2vh;
+    bottom: 20vh;
+    background: url('../med/laptop.png');
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+.s-about-side-phone.animate{
+    left: -16vh;
+    transform: rotate(45deg);
+}
+.s-about-side-pc.animate{
+    right: -50vh;
+}
+@keyframes pop-up{
+    0%{
+        opacity: 0;
+        transform: scale(0.4);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.float.animate{
+    animation: float 1s;
+}
+@keyframes float{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.s-ach-tab-wrap{
+    height: 60vh;
+    width: 76.7vh;
+    position: relative;
+}
+.s-ach-tab-front{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: url('../med/tab.png');
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+}
+.s-ach-tab-back{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    background: url('../med/background.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+.s-ach-tab-main{
+    position: absolute;
+    top: 6.48vh;
+    left: 7.08vh;
+    bottom: 6.48vh;
+    right: 7.08vh;
+    z-index: 3;
+}
+.s-ach-tab-taskbar{
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.507);
+    display: flex;
+}
+.s-taskbar-time{
+    color: black;
+    font-size: 13px;
+    width: 100%;
+}
+.s-ach-box-wrap-wrap{
+    width: 100vw;
+    position: relative;
+    height: 40vh;
+}
+.s-ach-box-wrap{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left:25vw;
+    transition: 0.4s;
+}
+
+.s-ach-box{
+    width: 50vw;
+    height: 40vh;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0px 150px;
+    color: inherit;
+}
+.s-ach-box:hover .s-ach-box-front::before{
+    left: 0px;
+}
+.s-ach-box:hover .s-ach-box-number{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.s-ach-box-number{
+    position: absolute;
+    top: -70px;
+    font-family: heavyf;
+    left: -40px;
+    font-size: 10vw;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .4s cubic-bezier(.694,.048,.335,1) .15s;
+    transition-delay: 0.4s;
+}
+.s-ach-box-background{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0.7;
+}
+.s-ach-box-background-bg{
+    background:rgb(46, 46, 46);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+.s-ach-box-front{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+    right:0px;
+    overflow: hidden;
+    top: 0px;
+}
+.s-ach-box-front::before{
+    content: '';
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    width: 50vw;
+    left: -50vw;
+    background: linear-gradient(to right, rgb(179, 0, 149), rgb(218, 0, 0));
+    opacity: 0.8;
+    transition: .4s cubic-bezier(.694,.048,.335,1) .15s;
+    z-index: -1;
+}
+.s-ach-box-written{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 50px;
+    text-align: right;
+    transform: scale(0.9);
+    transition: .4s cubic-bezier(.694,.048,.335,1) .15s;
+}
+.s-ach-box:hover .s-ach-box-written{
+    transform: scale(1);
+}
+.s-ach-box-title{
+    font-family: heavyf;
+    font-size: 50px;
+    font-weight: 800;
+}
+.s-slide-control{
+    padding-top: 100px;
+}
+.s-slide-control-button{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    color: #e2e2e2;
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.s-slide-control-button:hover{
+    transform: scale(1.5);
+    color: white;
+}
+.s-contact-wrap{
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: relative;
+}
+.s-contact-main{
+    font-size: 25px;
+}
+.s-contact-butts{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: linear-gradient(to right, rgb(179, 0, 149), rgb(218, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+.s-contact-butts::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgb(29, 29, 29);
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.3s;
+    border-radius: 50%;
+}
+.s-contact-butts:hover::after{
+    transform: scale(1);
+}
